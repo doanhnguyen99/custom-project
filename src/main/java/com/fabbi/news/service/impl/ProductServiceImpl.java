@@ -36,4 +36,9 @@ public class ProductServiceImpl implements IProductService {
         productEntity = modelMapper.map(productDTO, ProductEntity.class);
         return productRepository.save(productEntity);
     }
+
+    @Override
+    public void delete(Long productId) {
+        productRepository.deleteById(productId);
+    }
 }

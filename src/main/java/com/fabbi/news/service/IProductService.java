@@ -7,8 +7,7 @@ import java.util.Optional;
 
 public interface IProductService {
     void addProduct(ProductDTO productDTO);
-//    void updateProduct(ProductDTO productDTO);
     Optional<ProductEntity> findById(Long productId);
-
     ProductEntity update(ProductDTO productDTO);
+    void delete(Long productId);
 }
